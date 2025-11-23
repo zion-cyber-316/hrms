@@ -29,7 +29,7 @@ useEffect(()=>{
 
 const fetchdata =async()=>{
 try{
-  const res = await axios.get("http://localhost:5000/api/department")
+  const res = await axios.get("https://hrms-backend-hjoj.onrender.com/api/department")
   console.log(res)
   if(res.data.success){
     let sno =1
