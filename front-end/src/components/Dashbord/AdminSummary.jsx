@@ -12,7 +12,7 @@ useEffect(()=>{
 
  const fetchSummary = async()=>{
   try{
-    const summary = await axios.get('http://localhost:5000/api/dashbord/summary')
+    const summary = await axios.get('https://hrms-backend-hjoj.onrender.com/api/dashbord/summary')
    console.log(summary.data)
 setSummary(summary.data)
   }catch(error){
