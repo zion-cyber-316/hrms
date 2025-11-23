@@ -10,7 +10,7 @@ const EditDepartment = () => {
     useEffect(()=>{
 const fetchData = async()=>{
   try{
-    const response = await axios.get(`http://localhost:5000/api/department/${id}`)
+    const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/department/${id}`)
     console.log(response)
   
   if(response.data.success){
@@ -37,7 +37,7 @@ e.preventDefault();
 
 
 try{
-const response = await axios.put(`http://localhost:5000/api/department/${id}`,department,
+const response = await axios.put(`https://hrms-backend-hjoj.onrender.com/api/department/${id}`,department,
   {headers :{
     "Authorization" : `Bearer ${localStorage.getItem("token")}`
    }}
