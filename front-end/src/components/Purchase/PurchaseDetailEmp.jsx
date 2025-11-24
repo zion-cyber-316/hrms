@@ -10,7 +10,7 @@ const PurchaseDetailEmp = () => {
     const fetchPurchase = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/purchase/detail/${id}`
+          `https://hrms-backend-hjoj.onrender.com/api/purchase/detail/${id}`
         );
         if (response.data.success) {
           setPurchase(response.data.purchase);
@@ -33,7 +33,7 @@ const PurchaseDetailEmp = () => {
             <div>
               {purchase.bill && (
                 <img
-                  src={`http://localhost:5000/${purchase.bill}`}
+                  src={`https://hrms-backend-hjoj.onrender.com/${purchase.bill}`}
                   className="border w-72"
                   alt="Bill"
                 />
