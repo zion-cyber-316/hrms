@@ -40,7 +40,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/employee/add",
+      "https://hrms-backend-hjoj.onrender.com/api/employee/add",
       formDataobj,
       {
         headers: {
