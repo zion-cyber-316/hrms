@@ -11,7 +11,7 @@ let sno =1
     const fetchleaves = async()=>{
 
 try{
-const response = await axios.get(`http://localhost:5000/api/leave/${user._id}`)
+const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/leave/${user._id}`)
 console.log(response.data)
 if(response.data.success){
   setLeaves(response.data.leaves)
