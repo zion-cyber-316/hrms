@@ -17,7 +17,7 @@ const AdminPurchase = () => {
     console.log(user._id)
     
 try{
-  const res = await axios.get(`http://localhost:5000/api/purchase`)
+  const res = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/purchase`)
   
   // console.log(res.data)
   if(res.data.success){
