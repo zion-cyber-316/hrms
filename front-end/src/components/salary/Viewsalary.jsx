@@ -11,7 +11,7 @@ const Viewsalary = () => {
   const fetchSalaries = async()=>{
 
 try{
-const response = await axios.get(`http://localhost:5000/api/salary/${id}`)
+const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/salary/${id}`)
 console.log(response.data)
 if(response.data.success){
   setSalaries(response.data.salary)
