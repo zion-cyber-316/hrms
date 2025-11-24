@@ -26,7 +26,7 @@ const AdminSetting = () => {
     setError("Password not matched")
   }else{
     try{
-      const response = await axios.put("http://localhost:5000/api/setting/changeAdmin-password",setting)
+      const response = await axios.put("https://hrms-backend-hjoj.onrender.com/api/setting/changeAdmin-password",setting)
 
       if(response.data.success){
         logout()
