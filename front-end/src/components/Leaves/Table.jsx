@@ -11,7 +11,7 @@ const [filteredLeaves,setFilteredLeaves] = useState([])
 
     const fetchleaves = async()=>{
 try{
-  const res = await axios.get("http://localhost:5000/api/leave")
+  const res = await axios.get("https://hrms-backend-hjoj.onrender.com/api/leave")
   
   console.log(res.data)
   if(res.data.success){
