@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
  
   try {
     const response = await axios.post(
-      `http://localhost:5000/api/salary/add`,
+      `https://hrms-backend-hjoj.onrender.com/api/salary/add`,
       salary,
      
     );
