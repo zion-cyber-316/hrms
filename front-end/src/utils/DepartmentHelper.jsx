@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import axios from "axios"
+
 
 export const columns =[
 
@@ -22,23 +22,8 @@ export const columns =[
 
 export const DepartmentButtons = ({_id , onDepartmentDelete})=>{
   const navigate = useNavigate()
-//   const handleDelete = async(id)=>{
 
-//  try{
-//     const response = await axios.delete(`http://localhost:5000/api/department/${id}`)
-//     console.log(response)
-  
-//   if(response.data.success){
-// onDepartmentDelete(id)
-//   }
-//   }catch(error){
-//   if(error.response && !error.response.data.success){
-//   alert(error.response)
-//   }
 
-//   }
-
-//   }
   return (
 <div className="flex space-x-3"> 
   <button className="px-3 py-1 text-white bg-teal-600 rounded"
@@ -49,10 +34,7 @@ export const DepartmentButtons = ({_id , onDepartmentDelete})=>{
 
 
 
-  {/* <button className="px-3 py-1 text-white bg-red-600 rounded"
-  onClick={()=>handleDelete(_id)}
-  
-  >Delete</button> */}
+ 
 </div>
 
 
