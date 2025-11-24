@@ -15,7 +15,7 @@ const navigate =useNavigate()
     useEffect(()=>{
   const fetchleave = async()=>{
     try{
-      const response = await axios.get(`http://localhost:5000/api/leave/detail/${id}`)
+      const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/leave/detail/${id}`)
       console.log(response.data.leave)
       if(response.data.success){
         setLeave(response.data.leave)
@@ -37,7 +37,7 @@ const ChangeStatus = async(id ,status)=>{
 
 
      try{
-      const response = await axios.put(`http://localhost:5000/api/leave/${id}`,{status})
+      const response = await axios.put(`https://hrms-backend-hjoj.onrender.com/api/leave/${id}`,{status})
     
       if(response.data.success){
   navigate('/admin-dashbord/leave')
@@ -59,7 +59,7 @@ const ChangeStatus = async(id ,status)=>{
     </h2>
     <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div>
-            <img src={`http://localhost:5000/${leave.employeeId.userId.profileImage}`}
+            <img src={`https://hrms-backend-hjoj.onrender.com/${leave.employeeId.userId.profileImage}`}
             className='rounded-full border w-72' />
         </div>
 <div>
