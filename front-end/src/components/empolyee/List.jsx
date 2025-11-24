@@ -15,7 +15,7 @@ const List = () => {
 useEffect(()=>{
 const fetchempdata =async()=>{
 try{
-  const res = await axios.get("http://localhost:5000/api/employee")
+  const res = await axios.get("https://hrms-backend-hjoj.onrender.com/api/employee")
   
   console.log(res.data)
   if(res.data.success){
@@ -27,7 +27,7 @@ try{
       dep_name:emp.department.dep_name,
       name :emp.userId.name,
       dob: new Date( emp.dob).toLocaleDateString(),
-      profileImage :<img width={40}  className='rounded-full' src={`http://localhost:5000/${emp.userId.profileImage}`}/>   ,
+      profileImage :<img width={40}  className='rounded-full' src={`https://hrms-backend-hjoj.onrender.com/${emp.userId.profileImage}`}/>   ,
       action : (<EmployeesButtons Id={emp._id}/>)
       }
     ))
