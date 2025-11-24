@@ -23,7 +23,7 @@ setLeave((prevState)=>({...prevState ,[name]:value}))
     e.preventDefault()
     console.log(leave)
     try{
-        const res = await axios.post(`http://localhost:5000/api/leave/add`,leave)
+        const res = await axios.post(`https://hrms-backend-hjoj.onrender.com/api/leave/add`,leave)
         if(res.data.success){
            navigate("/employee-dashbord/leaves")
         }
