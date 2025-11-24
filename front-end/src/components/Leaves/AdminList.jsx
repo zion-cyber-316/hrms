@@ -14,7 +14,7 @@ let sno =1
         console.log(id)
 
 try{
-const response = await axios.get(`http://localhost:5000/api/leave/admin/${id}`)
+const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/leave/admin/${id}`)
 console.log(response.data)
 if(response.data.success){
   setLeaves(response.data.leaves)
