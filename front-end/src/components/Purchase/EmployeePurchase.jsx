@@ -17,7 +17,7 @@ const EmployeePurchase = () => {
     console.log(user._id)
     
 try{
-  const res = await axios.get(`http://localhost:5000/api/purchase/${user._id}`)
+  const res = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/purchase/${user._id}`)
   
   // console.log(res.data)
   if(res.data.success){
