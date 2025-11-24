@@ -78,7 +78,7 @@ if (formData.bill) {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/purchase/add", 
+      "https://hrms-backend-hjoj.onrender.com/api/purchase/add", 
         formDataobj,
         
       
