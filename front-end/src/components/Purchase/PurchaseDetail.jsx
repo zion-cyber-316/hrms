@@ -10,7 +10,7 @@ const PurchaseDetail = () => {
     const fetchPurchase = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/purchase/detail/${id}`
+          `https://hrms-backend-hjoj.onrender.com/api/purchase/detail/${id}`
         );
         if (response.data.success) {
           setPurchase(response.data.purchase);
@@ -28,7 +28,7 @@ const PurchaseDetail = () => {
     if (!purchase?.bill) return;
 
     const link = document.createElement('a');
-    link.href = `http://localhost:5000/${purchase.bill}`; // bill URL
+    link.href = `https://hrms-backend-hjoj.onrender.com/${purchase.bill}`; // bill URL
     link.download = `Bill_${purchase._id}.jpg`; // file name
     document.body.appendChild(link);
     link.click();
@@ -47,7 +47,7 @@ const PurchaseDetail = () => {
               {purchase.bill && (
                 <div>
                   <img
-                    src={`http://localhost:5000/${purchase.bill}`}
+                    src={`https://hrms-backend-hjoj.onrender.com/${purchase.bill}`}
                     className="border w-72"
                     alt="Bill"
                   />
