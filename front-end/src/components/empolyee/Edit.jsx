@@ -33,7 +33,7 @@ getDepartments()
 
 const fetchEmployee = async()=>{
   try{
-    const response = await axios.get(`http://localhost:5000/api/employee/${id}`)
+    const response = await axios.get(`https://hrms-backend-hjoj.onrender.com/api/employee/${id}`)
     
   console.log(response)
   if(response.data.success){
@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
  
   try {
     const response = await axios.put(
-      `http://localhost:5000/api/employee/edit/${id}`,
+      `https://hrms-backend-hjoj.onrender.com/api/employee/edit/${id}`,
       employee,
      
     );
